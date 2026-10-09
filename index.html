@@ -3,90 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XtremePC // Consultoría & TI para Negocios</title>
+    <title>XtremePC // Soporte, Redes & TI para Negocios</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandorange: '#ff7a00', // El naranja encendido del logo OG
+                        darkbg: '#050508',     // Negro profundo con un toque azulado/cyber
+                        darkcard: '#0f1016',   // Gris oscuro para las tarjetas
+                        lightgray: '#94a3b8'   // Texto secundario
+                    },
+                    fontFamily: {
+                        mono: ['"Share Tech Mono"', '"Lucida Console"', 'monospace'],
+                        sans: ['system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Importamos una fuente geek y techy para los títulos de sección -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        /* Animación sutil de resplandor para las luces del fondo */
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.15; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.1); }
+        }
+        .glow-bg {
+            animation: pulse-glow 8s ease-in-out infinite;
+        }
+        /* Efecto de texto neon/luminoso naranja */
+        .neon-orange {
+            text-shadow: 0 0 10px rgba(255,122,0,0.5), 0 0 20px rgba(255,122,0,0.3);
+        }
+        .border-neon {
+            box-shadow: 0 0 15px rgba(255,122,0,0.15);
+        }
+    </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased">
+<body class="bg-darkbg text-slate-100 font-sans antialiased relative overflow-x-hidden min-h-screen">
+
+    <!-- LUCES LUMINOSAS EN EL FONDO (Cyber / Halloween / Tech Glows) -->
+    <div class="absolute top-[-10%] left-[-20%] w-[600px] h-[600px] bg-brandorange/10 rounded-full blur-[130px] pointer-events-none glow-bg"></div>
+    <div class="absolute top-[30%] right-[-10%] w-[500px] h-[500px] bg-brandorange/5 rounded-full blur-[150px] pointer-events-none glow-bg" style="animation-delay: 3s;"></div>
+    <div class="absolute bottom-[10%] left-[10%] w-[400px] h-[400px] bg-brandorange/5 rounded-full blur-[120px] pointer-events-none glow-bg" style="animation-delay: 5s;"></div>
 
     <!-- Hero Section -->
-    <header class="max-w-4xl mx-auto px-6 pt-16 pb-12 text-center">
-        <span class="text-cyan-400 font-mono text-sm tracking-widest uppercase font-semibold">XtremePC // Soporte & TI</span>
-        <h1 class="text-4xl sm:text-6xl font-extrabold text-white mt-4 mb-6 leading-tight">
-            La tecnología de tu negocio, <span class="text-cyan-400">sin complicaciones.</span>
+    <header class="max-w-4xl mx-auto px-6 pt-16 pb-12 text-center relative z-10">
+        <!-- Logo OG de XtremePC -->
+        <div class="inline-block mb-8 relative">
+            <!-- Brillo detrás del logo -->
+            <div class="absolute inset-0 bg-brandorange/20 blur-xl rounded-full"></div>
+            <!-- Ruta al logo original (puedes meter imagen_7.png en tu repo o usar ruta directa) -->
+            <img src="image_7.png" alt="XtremePC Original" class="h-40 mx-auto relative z-10 filter drop-shadow-[0_0_15px_rgba(255,122,0,0.4)]">
+        </div>
+        
+        <br>
+        <span class="text-brandorange font-mono text-xs tracking-[0.2em] uppercase font-bold px-3 py-1 bg-brandorange/10 rounded border border-brandorange/30 neon-orange">
+            // SERVICIOS DIGITALES & INFRAESTRUCTURA //
+        </span>
+        
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white mt-6 mb-6 leading-tight uppercase tracking-tight">
+            La tecnología de tu negocio, <span class="text-brandorange neon-orange">sin complicaciones.</span>
         </h1>
-        <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-            Nos encargamos de tu presencia digital, tus redes, seguridad y equipos de cómputo. Tú concéntrate en vender.
+        
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8 font-mono text-sm leading-relaxed">
+            Nos encargamos de tu presencia en internet, tus redes, cámaras de seguridad y equipos de cómputo. <br class="hidden sm:inline">Tú concéntrate en vender.
         </p>
+        
         <a href="https://wa.me/5218182806318?text=Hola!%20Buenas%20tardes,%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20XtremePC." 
            target="_blank" 
-           class="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-lg transition duration-200 text-lg">
+           class="inline-flex items-center gap-3 bg-brandorange hover:bg-opacity-95 text-darkbg font-extrabold px-8 py-4 rounded-lg shadow-[0_0_20px_rgba(255,122,0,0.4)] hover:shadow-[0_0_30px_rgba(255,122,0,0.6)] transition duration-300 text-lg uppercase tracking-wide">
             <i class="fa-brands fa-whatsapp text-2xl"></i>
             Solicitar Información por WhatsApp
         </a>
     </header>
 
     <!-- Pilares de Servicio -->
-    <section class="max-w-5xl mx-auto px-6 py-12">
-        <h2 class="text-2xl font-bold text-center text-slate-200 mb-10 font-mono">// Soluciones para Negocios Reales</h2>
+    <section class="max-w-5xl mx-auto px-6 py-12 relative z-10">
+        <h2 class="text-2xl font-bold text-center text-slate-200 mb-10 font-mono tracking-widest text-brandorange uppercase neon-orange">// Soluciones para Negocios Reales</h2>
         <div class="grid md:grid-cols-3 gap-6">
             
-            <!-- Pilar 1 -->
-            <div class="bg-slate-800/60 border border-slate-700/60 p-6 rounded-2xl">
-                <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-xl flex items-center justify-center text-xl mb-4">
+            <!-- Pilar 1: Despegue Digital -->
+            <div class="bg-darkcard/80 border border-brandorange/20 hover:border-brandorange/60 p-6 rounded-2xl transition duration-300 border-neon group relative overflow-hidden">
+                <div class="absolute -right-6 -bottom-6 text-brandorange/5 group-hover:text-brandorange/10 transition duration-300 text-8xl font-mono select-none">
                     <i class="fa-solid fa-cloud"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2">Despegue Digital</h3>
+                <div class="w-12 h-12 bg-brandorange/10 text-brandorange rounded-xl flex items-center justify-center text-xl mb-4 border border-brandorange/30">
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 font-mono uppercase tracking-wide">Despegue Digital</h3>
                 <p class="text-slate-400 text-sm mb-4">Tu marca en el mapa y lista para vender.</p>
-                <ul class="text-slate-300 text-sm space-y-2">
-                    <li>✓ Dominio y Correo Profesional</li>
-                    <li>✓ Perfil de Google Maps (SEO Local)</li>
-                    <li>✓ Landing Page de Contacto</li>
+                <ul class="text-slate-300 text-sm space-y-2 font-mono text-xs">
+                    <li><span class="text-brandorange">✓</span> Dominio y Correo Profesional</li>
+                    <li><span class="text-brandorange">✓</span> Perfil de Google Maps (SEO Local)</li>
+                    <li><span class="text-brandorange">✓</span> Landing Page de Contacto</li>
                 </ul>
             </div>
 
-            <!-- Pilar 2 -->
-            <div class="bg-slate-800/60 border border-slate-700/60 p-6 rounded-2xl">
-                <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4">
+            <!-- Pilar 2: Mantenimiento & TI -->
+            <div class="bg-darkcard/80 border border-brandorange/20 hover:border-brandorange/60 p-6 rounded-2xl transition duration-300 border-neon group relative overflow-hidden">
+                <div class="absolute -right-6 -bottom-6 text-brandorange/5 group-hover:text-brandorange/10 transition duration-300 text-8xl font-mono select-none">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                </div>
+                <div class="w-12 h-12 bg-brandorange/10 text-brandorange rounded-xl flex items-center justify-center text-xl mb-4 border border-brandorange/30">
                     <i class="fa-solid fa-microchip"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2">Mantenimiento & TI</h3>
+                <h3 class="text-xl font-bold text-white mb-2 font-mono uppercase tracking-wide">Mantenimiento & TI</h3>
                 <p class="text-slate-400 text-sm mb-4">Equipos rápidos, limpios y seguros.</p>
-                <ul class="text-slate-300 text-sm space-y-2">
-                    <li>✓ Aceleración SSD / RAM & Formateo</li>
-                    <li>✓ Respaldos Automáticos en Nube</li>
-                    <li>✓ Pólizas Mensuales de Soporte</li>
+                <ul class="text-slate-300 text-sm space-y-2 font-mono text-xs">
+                    <li><span class="text-brandorange">✓</span> Aceleración SSD/RAM & Formateo</li>
+                    <li><span class="text-brandorange">✓</span> Respaldos Automáticos en Nube</li>
+                    <li><span class="text-brandorange">✓</span> Pólizas Mensuales de Soporte</li>
                 </ul>
             </div>
 
-            <!-- Pilar 3 -->
-            <div class="bg-slate-800/60 border border-slate-700/60 p-6 rounded-2xl">
-                <div class="w-12 h-12 bg-purple-500/10 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-4">
+            <!-- Pilar 3: Redes & CCTV -->
+            <div class="bg-darkcard/80 border border-brandorange/20 hover:border-brandorange/60 p-6 rounded-2xl transition duration-300 border-neon group relative overflow-hidden">
+                <div class="absolute -right-6 -bottom-6 text-brandorange/5 group-hover:text-brandorange/10 transition duration-300 text-8xl font-mono select-none">
                     <i class="fa-solid fa-network-wired"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2">Redes & CCTV</h3>
+                <div class="w-12 h-12 bg-brandorange/10 text-brandorange rounded-xl flex items-center justify-center text-xl mb-4 border border-brandorange/30">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 font-mono uppercase tracking-wide">Redes & CCTV</h3>
                 <p class="text-slate-400 text-sm mb-4">Infraestructura local a la medida.</p>
-                <ul class="text-slate-300 text-sm space-y-2">
-                    <li>✓ Instalación Wi-Fi y Cableado</li>
-                    <li>✓ Cámaras monitoreadas por Celular</li>
-                    <li>✓ Configuración POS e Impresoras</li>
+                <ul class="text-slate-300 text-sm space-y-2 font-mono text-xs">
+                    <li><span class="text-brandorange">✓</span> Instalación Wi-Fi y Cableado</li>
+                    <li><span class="text-brandorange">✓</span> Cámaras monitoreadas por Celular</li>
+                    <li><span class="text-brandorange">✓</span> Configuración POS e Impresoras</li>
                 </ul>
             </div>
 
         </div>
     </section>
 
-    <!-- Call to Action Final -->
-    <footer class="max-w-4xl mx-auto px-6 py-12 text-center border-t border-slate-800 mt-12">
-        <p class="text-slate-400 mb-6">¿Tienes dudas o quieres revisar las computadoras o red de tu local?</p>
+    <!-- Póliza de Seguro de TI Banner -->
+    <section class="max-w-4xl mx-auto px-6 py-8 relative z-10 text-center">
+        <div class="border-y border-brandorange/20 py-8">
+            <p class="text-brandorange font-mono text-xs tracking-[0.2em] uppercase mb-2 neon-orange">
+                MANTENIMIENTO GARANTIZADO // SOPORTE REMOTO // SOPORTE PRESENCIAL
+            </p>
+            <p class="text-2xl font-extrabold text-white uppercase tracking-tight">
+                "OLVÍDATE DE LOS PROBLEMAS DE SISTEMAS"
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="max-w-4xl mx-auto px-6 py-12 text-center relative z-10">
+        <p class="text-slate-400 mb-6 font-mono text-sm">¿Tienes dudas o quieres que revisemos tu negocio?</p>
         <a href="https://wa.me/5218182806318?text=Hola!%20Buenas%20tardes,%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20XtremePC." 
            target="_blank" 
-           class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-cyan-400 font-semibold px-6 py-3 rounded-xl border border-slate-700 transition duration-200">
+           class="inline-flex items-center gap-2 bg-darkcard hover:bg-slate-800 text-brandorange font-bold px-6 py-3 rounded-lg border border-brandorange/40 hover:border-brandorange/80 shadow-[0_0_15px_rgba(255,122,0,0.1)] transition duration-300 font-mono text-sm uppercase">
             <i class="fa-brands fa-whatsapp"></i> Mandar mensaje directo
         </a>
-        <p class="text-xs text-slate-500 mt-8">
-            <strong>XtremePC</strong> — Powered by BareMetal2Cloud Engineering
-        </p>
+        
+        <div class="mt-12 text-xs text-lightgray font-mono space-y-1">
+            <p><strong>XtremePC</strong> — Powered by BareMetal2Cloud Engineering</p>
+            <p>Monterrey, N.L. // Área Metropolitana</p>
+            <p class="text-brandorange/70 mt-2">// #XtremePCLaOriginal</p>
+        </div>
     </footer>
 
 </body>
