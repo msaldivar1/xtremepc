@@ -13,7 +13,7 @@
                     colors: {
                         brandorange: '#ff7a00',
                         darkbg: '#08080a',
-                        darkcard: '#0f1016',
+                        darkcard: '#0f1016e6', // Un poquito transparente para que se vea el circuito detrás
                         lightgray: '#94a3b8'
                     },
                     fontFamily: {
@@ -26,34 +26,48 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
-        /* PATRÓN DE CIRCUITOS MOTHERBOARD IDÉNTICO AL MOCKUP */
-        .bg-circuit {
-            background-color: #08080a;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23ff7a00' stroke-width='0.7' stroke-opacity='0.15'%3E%3Cpath d='M0 10h30v20H0zM40 0v40h10V0zM60 20h20v40H60zM10 50h40v30H10z'/%3E%3Ccircle cx='30' cy='10' r='2' fill='%23ff7a00' fill-opacity='0.25'/%3E%3Ccircle cx='40' cy='40' r='2' fill='%23ff7a00' fill-opacity='0.25'/%3E%3Ccircle cx='60' cy='20' r='2' fill='%23ff7a00' fill-opacity='0.25'/%3E%3Ccircle cx='10' cy='50' r='2' fill='%23ff7a00' fill-opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
+        /* FONDO DE MOTHERBOARD REAL (fondo.png) */
+        .bg-mb-circuit {
+            background-color: #050508;
+            background-image: linear-gradient(to bottom, rgba(5,5,8,0.7), rgba(5,5,8,0.9)), url('fondo.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
         }
 
         .neon-orange {
             text-shadow: 0 0 12px rgba(255,122,0,0.6), 0 0 25px rgba(255,122,0,0.3);
         }
-        .border-neon {
-            box-shadow: 0 0 20px rgba(255,122,0,0.12);
+        
+        /* Efecto de cristal para las tarjetas */
+        .glass-card {
+            background: rgba(15, 16, 22, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 122, 0, 0.15);
+        }
+        
+        .glass-card:hover {
+            border: 1px solid rgba(255, 122, 0, 0.5);
+            box-shadow: 0 0 20px rgba(255, 122, 0, 0.15);
         }
     </style>
 </head>
-<body class="bg-circuit text-slate-100 font-sans antialiased relative overflow-x-hidden min-h-screen">
+<body class="bg-mb-circuit text-slate-100 font-sans antialiased relative overflow-x-hidden min-h-screen">
 
     <!-- RESPLANDOR CENTRAL DETRÁS DEL LOGO -->
-    <div class="absolute top-[5%] left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-brandorange/15 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-[5%] left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-brandorange/10 rounded-full blur-[120px] pointer-events-none"></div>
 
     <!-- Hero Section -->
     <header class="max-w-4xl mx-auto px-6 pt-12 pb-10 text-center relative z-10">
         <!-- Logo Negro Integrado Perfecto -->
         <div class="inline-block mb-4 relative">
-            <img src="logo_negro_no_bg.png" alt="XtremePC" class="h-48 sm:h-56 mx-auto relative z-10 filter drop-shadow-[0_0_20px_rgba(255,122,0,0.3)]">
+            <img src="logo_clean.png" alt="XtremePC" class="h-48 sm:h-56 mx-auto relative z-10 filter drop-shadow-[0_0_25px_rgba(255,122,0,0.35)]">
         </div>
         
         <br>
-        <span class="text-brandorange font-mono text-xs tracking-[0.2em] uppercase font-bold px-4 py-1.5 bg-brandorange/10 rounded-md border border-brandorange/30 neon-orange">
+        <span class="text-brandorange font-mono text-xs tracking-[0.2em] uppercase font-bold px-4 py-1.5 bg-brandorange/15 rounded-md border border-brandorange/35 neon-orange">
             // SERVICIOS DIGITALES & INFRAESTRUCTURA //
         </span>
         
@@ -78,7 +92,7 @@
         <h2 class="text-2xl font-bold text-center text-slate-200 mb-10 font-mono tracking-widest text-brandorange uppercase neon-orange">// Soluciones para Negocios Reales</h2>
         <div class="grid md:grid-cols-3 gap-6">
             
-            <div class="bg-darkcard/90 backdrop-blur border border-brandorange/20 hover:border-brandorange/60 p-6 rounded-2xl transition duration-300 border-neon group">
+            <div class="glass-card p-6 rounded-2xl transition duration-300 group">
                 <div class="w-12 h-12 bg-brandorange/10 text-brandorange rounded-xl flex items-center justify-center text-xl mb-4 border border-brandorange/30">
                     <i class="fa-solid fa-cloud"></i>
                 </div>
@@ -91,7 +105,7 @@
                 </ul>
             </div>
 
-            <div class="bg-darkcard/90 backdrop-blur border border-brandorange/20 hover:border-brandorange/60 p-6 rounded-2xl transition duration-300 border-neon group">
+            <div class="glass-card p-6 rounded-2xl transition duration-300 group">
                 <div class="w-12 h-12 bg-brandorange/10 text-brandorange rounded-xl flex items-center justify-center text-xl mb-4 border border-brandorange/30">
                     <i class="fa-solid fa-microchip"></i>
                 </div>
@@ -104,7 +118,7 @@
                 </ul>
             </div>
 
-            <div class="bg-darkcard/90 backdrop-blur border border-brandorange/20 hover:border-brandorange/60 p-6 rounded-2xl transition duration-300 border-neon group">
+            <div class="glass-card p-6 rounded-2xl transition duration-300 group">
                 <div class="w-12 h-12 bg-brandorange/10 text-brandorange rounded-xl flex items-center justify-center text-xl mb-4 border border-brandorange/30">
                     <i class="fa-solid fa-network-wired"></i>
                 </div>
