@@ -12,7 +12,7 @@
                 extend: {
                     colors: {
                         brandorange: '#ff7a00',
-                        darkbg: '#050508',
+                        darkbg: '#08080a',
                         darkcard: '#0f1016',
                         lightgray: '#94a3b8'
                     },
@@ -26,64 +26,50 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
-        /* FONDO DE CIRCUITOS TIPO MOTHERBOARD (SVG integrado) */
+        /* PATRÓN DE CIRCUITOS MOTHERBOARD IDÉNTICO AL MOCKUP */
         .bg-circuit {
-            background-color: #050508;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M10 10h80v80H10z' fill='none'/%3E%3Cpath d='M0 20h20v20H0zm30 0h40v10H30zm0 20h10v40H30zm20 0h30v10H50zm20 20h20v20H70zM10 50h10v30H10zm50 20h10v20H60z' fill='none' stroke='%23ff7a00' stroke-width='0.5' stroke-opacity='0.12'/%3E%3Ccircle cx='20' cy='20' r='2' fill='%23ff7a00' fill-opacity='0.2'/%3E%3Ccircle cx='70' cy='20' r='2' fill='%23ff7a00' fill-opacity='0.2'/%3E%3Ccircle cx='30' cy='40' r='2' fill='%23ff7a00' fill-opacity='0.2'/%3E%3Ccircle cx='80' cy='50' r='2' fill='%23ff7a00' fill-opacity='0.2'/%3E%3Ccircle cx='20' cy='80' r='2' fill='%23ff7a00' fill-opacity='0.2'/%3E%3C/svg%3E");
+            background-color: #08080a;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23ff7a00' stroke-width='0.7' stroke-opacity='0.15'%3E%3Cpath d='M0 10h30v20H0zM40 0v40h10V0zM60 20h20v40H60zM10 50h40v30H10z'/%3E%3Ccircle cx='30' cy='10' r='2' fill='%23ff7a00' fill-opacity='0.25'/%3E%3Ccircle cx='40' cy='40' r='2' fill='%23ff7a00' fill-opacity='0.25'/%3E%3Ccircle cx='60' cy='20' r='2' fill='%23ff7a00' fill-opacity='0.25'/%3E%3Ccircle cx='10' cy='50' r='2' fill='%23ff7a00' fill-opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
         }
 
-        /* TRUCO PARA MEZCLAR EL LOGO Y QUITAR EL PARCHE NEGRO/GRIS */
-        .blend-logo {
-            mix-blend-mode: screen;
-        }
-
-        @keyframes pulse-glow {
-            0%, 100% { opacity: 0.15; transform: scale(1); }
-            50% { opacity: 0.3; transform: scale(1.1); }
-        }
-        .glow-bg {
-            animation: pulse-glow 8s ease-in-out infinite;
-        }
         .neon-orange {
-            text-shadow: 0 0 10px rgba(255,122,0,0.5), 0 0 20px rgba(255,122,0,0.3);
+            text-shadow: 0 0 12px rgba(255,122,0,0.6), 0 0 25px rgba(255,122,0,0.3);
         }
         .border-neon {
-            box-shadow: 0 0 15px rgba(255,122,0,0.15);
+            box-shadow: 0 0 20px rgba(255,122,0,0.12);
         }
     </style>
 </head>
 <body class="bg-circuit text-slate-100 font-sans antialiased relative overflow-x-hidden min-h-screen">
 
-    <!-- RESPLANDORES EN EL FONDO -->
-    <div class="absolute top-[-10%] left-[-20%] w-[600px] h-[600px] bg-brandorange/10 rounded-full blur-[130px] pointer-events-none glow-bg"></div>
-    <div class="absolute top-[30%] right-[-10%] w-[500px] h-[500px] bg-brandorange/5 rounded-full blur-[150px] pointer-events-none glow-bg" style="animation-delay: 3s;"></div>
+    <!-- RESPLANDOR CENTRAL DETRÁS DEL LOGO -->
+    <div class="absolute top-[5%] left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-brandorange/15 rounded-full blur-[120px] pointer-events-none"></div>
 
     <!-- Hero Section -->
-    <header class="max-w-4xl mx-auto px-6 pt-16 pb-12 text-center relative z-10">
-        <!-- Logo integrado sin recuadro sobrepuesto -->
-        <div class="inline-block mb-6 relative">
-            <div class="absolute inset-0 bg-brandorange/20 blur-2xl rounded-full"></div>
-            <img src="logo.jpg" alt="XtremePC" class="h-44 mx-auto relative z-10 blend-logo filter drop-shadow-[0_0_15px_rgba(255,122,0,0.5)]">
+    <header class="max-w-4xl mx-auto px-6 pt-12 pb-10 text-center relative z-10">
+        <!-- Logo Negro Integrado Perfecto -->
+        <div class="inline-block mb-4 relative">
+            <img src="logo_negro.png" alt="XtremePC" class="h-48 sm:h-56 mx-auto relative z-10 filter drop-shadow-[0_0_20px_rgba(255,122,0,0.3)]">
         </div>
         
         <br>
-        <span class="text-brandorange font-mono text-xs tracking-[0.2em] uppercase font-bold px-3 py-1 bg-brandorange/10 rounded border border-brandorange/30 neon-orange">
+        <span class="text-brandorange font-mono text-xs tracking-[0.2em] uppercase font-bold px-4 py-1.5 bg-brandorange/10 rounded-md border border-brandorange/30 neon-orange">
             // SERVICIOS DIGITALES & INFRAESTRUCTURA //
         </span>
         
         <h1 class="text-4xl sm:text-6xl font-extrabold text-white mt-6 mb-6 leading-tight uppercase tracking-tight">
-            La tecnología de tu negocio, <span class="text-brandorange neon-orange">sin complicaciones.</span>
+            LA TECNOLOGÍA DE TU NEGOCIO, <span class="text-brandorange neon-orange">SIN COMPLICACIONES.</span>
         </h1>
         
-        <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8 font-mono text-sm leading-relaxed">
+        <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-8 font-mono text-sm leading-relaxed">
             Nos encargamos de tu presencia en internet, tus redes, cámaras de seguridad y equipos de cómputo. <br class="hidden sm:inline">Tú concéntrate en vender.
         </p>
         
         <a href="https://wa.me/5218182806318?text=Hola!%20Buenas%20tardes,%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20XtremePC." 
            target="_blank" 
-           class="inline-flex items-center gap-3 bg-brandorange hover:bg-opacity-95 text-darkbg font-extrabold px-8 py-4 rounded-lg shadow-[0_0_20px_rgba(255,122,0,0.4)] hover:shadow-[0_0_30px_rgba(255,122,0,0.6)] transition duration-300 text-lg uppercase tracking-wide">
+           class="inline-flex items-center gap-3 bg-brandorange hover:bg-opacity-90 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-[0_0_25px_rgba(255,122,0,0.5)] hover:shadow-[0_0_35px_rgba(255,122,0,0.7)] transition duration-300 text-lg uppercase tracking-wide">
             <i class="fa-brands fa-whatsapp text-2xl"></i>
-            Solicitar Información por WhatsApp
+            SOLICITAR INFORMACIÓN POR WHATSAPP
         </a>
     </header>
 
@@ -92,7 +78,7 @@
         <h2 class="text-2xl font-bold text-center text-slate-200 mb-10 font-mono tracking-widest text-brandorange uppercase neon-orange">// Soluciones para Negocios Reales</h2>
         <div class="grid md:grid-cols-3 gap-6">
             
-            <div class="bg-darkcard/90 backdrop-blur border border-brandorange/20 hover:border-brandorange/60 p-6 rounded-2xl transition duration-300 border-neon group relative overflow-hidden">
+            <div class="bg-darkcard/90 backdrop-blur border border-brandorange/20 hover:border-brandorange/60 p-6 rounded-2xl transition duration-300 border-neon group">
                 <div class="w-12 h-12 bg-brandorange/10 text-brandorange rounded-xl flex items-center justify-center text-xl mb-4 border border-brandorange/30">
                     <i class="fa-solid fa-cloud"></i>
                 </div>
@@ -105,7 +91,7 @@
                 </ul>
             </div>
 
-            <div class="bg-darkcard/90 backdrop-blur border border-brandorange/20 hover:border-brandorange/60 p-6 rounded-2xl transition duration-300 border-neon group relative overflow-hidden">
+            <div class="bg-darkcard/90 backdrop-blur border border-brandorange/20 hover:border-brandorange/60 p-6 rounded-2xl transition duration-300 border-neon group">
                 <div class="w-12 h-12 bg-brandorange/10 text-brandorange rounded-xl flex items-center justify-center text-xl mb-4 border border-brandorange/30">
                     <i class="fa-solid fa-microchip"></i>
                 </div>
@@ -118,7 +104,7 @@
                 </ul>
             </div>
 
-            <div class="bg-darkcard/90 backdrop-blur border border-brandorange/20 hover:border-brandorange/60 p-6 rounded-2xl transition duration-300 border-neon group relative overflow-hidden">
+            <div class="bg-darkcard/90 backdrop-blur border border-brandorange/20 hover:border-brandorange/60 p-6 rounded-2xl transition duration-300 border-neon group">
                 <div class="w-12 h-12 bg-brandorange/10 text-brandorange rounded-xl flex items-center justify-center text-xl mb-4 border border-brandorange/30">
                     <i class="fa-solid fa-network-wired"></i>
                 </div>
@@ -139,4 +125,11 @@
         <p class="text-slate-400 mb-6 font-mono text-sm">¿Tienes dudas o quieres que revisemos tu negocio?</p>
         <a href="https://wa.me/5218182806318?text=Hola!%20Buenas%20tardes,%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20XtremePC." 
            target="_blank" 
-           class="inline-flex items-center gap-2 bg-darkcard hover:bg
+           class="inline-flex items-center gap-2 bg-darkcard hover:bg-slate-800 text-brandorange font-bold px-6 py-3 rounded-lg border border-brandorange/40 font-mono text-sm uppercase">
+            <i class="fa-brands fa-whatsapp"></i> Mandar mensaje directo
+        </a>
+        <p class="text-xs text-lightgray font-mono mt-8"><strong>XtremePC</strong> — Powered by BareMetal2Cloud Engineering</p>
+    </footer>
+
+</body>
+</html>
