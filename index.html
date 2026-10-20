@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XtremePC // Soporte, Redes & TI para Negocios</title>
+    <title>XtremePC // Servicios Digitales, Redes & TI para Negocios</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script>
@@ -13,7 +13,7 @@
                     colors: {
                         brandorange: '#ff7a00',
                         darkbg: '#08080a',
-                        darkcard: '#0f1016e6', // Un poquito transparente para que se vea el circuito detrás
+                        darkcard: '#0f1016e6',
                         lightgray: '#94a3b8'
                     },
                     fontFamily: {
@@ -26,7 +26,6 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
-        /* FONDO DE MOTHERBOARD REAL (fondo.png) */
         .bg-mb-circuit {
             background-color: #050508;
             background-image: linear-gradient(to bottom, rgba(5,5,8,0.7), rgba(5,5,8,0.9)), url('fondo.png');
@@ -40,7 +39,6 @@
             text-shadow: 0 0 12px rgba(255,122,0,0.6), 0 0 25px rgba(255,122,0,0.3);
         }
         
-        /* Efecto de cristal para las tarjetas */
         .glass-card {
             background: rgba(15, 16, 22, 0.85);
             backdrop-filter: blur(8px);
@@ -61,7 +59,6 @@
 
     <!-- Hero Section -->
     <header class="max-w-4xl mx-auto px-6 pt-12 pb-10 text-center relative z-10">
-        <!-- Logo Negro Integrado Perfecto -->
         <div class="inline-block mb-4 relative">
             <img src="logo_negro_no_bg.png" alt="XtremePC" class="h-48 sm:h-56 mx-auto relative z-10 filter drop-shadow-[0_0_25px_rgba(255,122,0,0.35)]">
         </div>
@@ -76,20 +73,36 @@
         </h1>
         
         <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-8 font-mono text-sm leading-relaxed">
-            Nos encargamos de tu presencia en internet, tus redes, cámaras de seguridad y equipos de cómputo. <br class="hidden sm:inline">Tú concéntrate en vender.
+            Presencia web, redes, cámaras de seguridad y soporte de TI sin enredos. <br class="hidden sm:inline">Tú concéntrate en vender, nosotros nos encargamos de todo.
         </p>
         
-        <a href="https://wa.me/5218182806318?text=Hola!%20Buenas%20tardes,%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20XtremePC." 
+        <a href="https://wa.me/5218182806318?text=Hola!%20Me%20interesa%20una%20diagn%C3%B3stico%20sin%20compromiso%20para%20mi%20negocio." 
            target="_blank" 
            class="inline-flex items-center gap-3 bg-brandorange hover:bg-opacity-90 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-[0_0_25px_rgba(255,122,0,0.5)] hover:shadow-[0_0_35px_rgba(255,122,0,0.7)] transition duration-300 text-lg uppercase tracking-wide">
             <i class="fa-brands fa-whatsapp text-2xl"></i>
-            SOLICITAR INFORMACIÓN POR WHATSAPP
+            SOLICITAR CONSULTA SIN COMPROMISO
         </a>
     </header>
 
+    <!-- Banner de Diagnóstico / Consultoría -->
+    <section class="max-w-4xl mx-auto px-6 mb-12 relative z-10">
+        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-brandorange flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <span class="text-brandorange font-mono text-xs uppercase tracking-widest">// ATENCIÓN PERSONALIZADA</span>
+                <h3 class="text-xl font-bold text-white font-mono mt-1">¿Necesitas una revisión en tu local u oficina?</h3>
+                <p class="text-slate-300 text-sm mt-1">Agendamos una evaluación por teléfono o a domicilio para diagnosticar tus redes, equipos o presencia digital sin compromiso.</p>
+            </div>
+            <a href="https://wa.me/5218182806318?text=Hola!%20Quisiera%20agendar%20una%20visita%20o%20llamada%20de%20diagn%C3%B3stico." 
+               target="_blank" 
+               class="whitespace-nowrap bg-brandorange/20 hover:bg-brandorange text-brandorange hover:text-slate-950 font-bold px-6 py-3 rounded-lg border border-brandorange/50 transition font-mono text-sm uppercase">
+                Agendar Diagnóstico
+            </a>
+        </div>
+    </section>
+
     <!-- Pilares de Servicio -->
-    <section class="max-w-5xl mx-auto px-6 py-12 relative z-10">
-        <h2 class="text-2xl font-bold text-center text-slate-200 mb-10 font-mono tracking-widest text-brandorange uppercase neon-orange">// Soluciones para Negocios Reales</h2>
+    <section class="max-w-5xl mx-auto px-6 py-8 relative z-10">
+        <h2 class="text-2xl font-bold text-center text-slate-200 mb-10 font-mono tracking-widest text-brandorange uppercase neon-orange">// Soluciones Digitales & TI</h2>
         <div class="grid md:grid-cols-3 gap-6">
             
             <div class="glass-card p-6 rounded-2xl transition duration-300 group">
@@ -97,11 +110,11 @@
                     <i class="fa-solid fa-cloud"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 font-mono uppercase tracking-wide">Despegue Digital</h3>
-                <p class="text-slate-400 text-sm mb-4">Tu marca en el mapa y lista para vender.</p>
+                <p class="text-slate-400 text-sm mb-4">Tu marca en el mapa y lista para captar clientes.</p>
                 <ul class="text-slate-300 text-sm space-y-2 font-mono text-xs">
                     <li><span class="text-brandorange">✓</span> Dominio y Correo Profesional</li>
                     <li><span class="text-brandorange">✓</span> Perfil de Google Maps (SEO Local)</li>
-                    <li><span class="text-brandorange">✓</span> Landing Page de Contacto</li>
+                    <li><span class="text-brandorange">✓</span> Landing Page & Menús Digitales</li>
                 </ul>
             </div>
 
@@ -110,7 +123,7 @@
                     <i class="fa-solid fa-microchip"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 font-mono uppercase tracking-wide">Mantenimiento & TI</h3>
-                <p class="text-slate-400 text-sm mb-4">Equipos rápidos, limpios y seguros.</p>
+                <p class="text-slate-400 text-sm mb-4">Equipos rápidos, optimizados y respaldados.</p>
                 <ul class="text-slate-300 text-sm space-y-2 font-mono text-xs">
                     <li><span class="text-brandorange">✓</span> Aceleración SSD/RAM & Formateo</li>
                     <li><span class="text-brandorange">✓</span> Respaldos Automáticos en Nube</li>
@@ -123,10 +136,10 @@
                     <i class="fa-solid fa-network-wired"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 font-mono uppercase tracking-wide">Redes & CCTV</h3>
-                <p class="text-slate-400 text-sm mb-4">Infraestructura local a la medida.</p>
+                <p class="text-slate-400 text-sm mb-4">Conectividad e infraestructura local.</p>
                 <ul class="text-slate-300 text-sm space-y-2 font-mono text-xs">
-                    <li><span class="text-brandorange">✓</span> Instalación Wi-Fi y Cableado</li>
-                    <li><span class="text-brandorange">✓</span> Cámaras monitoreadas por Celular</li>
+                    <li><span class="text-brandorange">✓</span> Optimización Wi-Fi y Cableado</li>
+                    <li><span class="text-brandorange">✓</span> Cámaras Monitoreadas por Celular</li>
                     <li><span class="text-brandorange">✓</span> Configuración POS e Impresoras</li>
                 </ul>
             </div>
